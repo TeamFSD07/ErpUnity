@@ -10,6 +10,8 @@ const AdminDash = () => {
     return (
         <>
         <Header />
+  
+  
         <ErpCard title="Employee" totalEmp="500"></ErpCard>
         <ErpCard title="Employee" totalEmp="500"></ErpCard>
         <ErpCard title="Employee" totalEmp="500"></ErpCard>

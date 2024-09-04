@@ -14,7 +14,7 @@ import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 const NAVIGATION = [
   {
     kind: 'header',
-    title: 'Main items',
+    title: 'Admin Dashboard',
   },
   
   {
@@ -92,7 +92,7 @@ DemoPageContent.propTypes = {
 function DashboardLayoutBasic(props) {
   const { window } = props;
 
-  const [pathname, setPathname] = React.useState('/dashboard');
+  const [pathname, setPathname] = React.useState('/ Admin Dashboard');
 
   const router = React.useMemo(() => {
     return {

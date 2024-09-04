@@ -3,7 +3,7 @@ import '../App.css';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import ServiceIdea from '../components/ServiceIdea'; 
-import '../App.css'; // Import the CSS file
+
 
 import admindash from '../assets/images/admindash.jpg';
 import employeedash from '../assets/images/employeedash.webp';
