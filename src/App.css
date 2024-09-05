@@ -39,12 +39,11 @@ ul, li, a {
 ul, li, a:hover {
     color: rgb(65, 46, 243) !important;
     
-
-
-
 }
 
-.navbar {
+.navbar .navbar-brand {
+  margin-left: 50px;
+  font-size: 30px;
   /* Add your navbar styles here */
 }
 
@@ -144,11 +143,16 @@ ul, li, a:hover {
   margin-top: 1em;
 }
 
+span{
+  padding-left: 90px;
+}
+
 .btn-cta_primary {
   background-color: #1e5289;
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
+  margin-left: 70px;
 }
 
 .btn-cta_primary a {
