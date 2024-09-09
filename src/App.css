@@ -1231,7 +1231,7 @@ footer .bottom-details .bottom_text {
   left: 0;
   z-index: 0;
   border-radius: 5px;
-  background: -webkit-linear-gradient(left,  #45a3bd, rgb(13, 98, 254));
+  background: -webkit-linear-gradient(left, #45a3bd, rgb(13, 98, 254));
   transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
 input[type="radio"]{
@@ -1275,7 +1275,7 @@ input[type="radio"]{
 .form-inner form .field input{
   height: 100%;
   width: 100%;
-  outline: none;
+  outline:#424141;
   padding-left: 15px;
   border-radius: 5px;
   border: 2px solid rgb(46, 45, 45);
@@ -1288,11 +1288,11 @@ input[type="radio"]{
   /* box-shadow: inset 0 0 3px #fb6aae; */
 }
 .form-inner form .field input::placeholder{
-  color: #999;
+  color: #424141;
   transition: all 0.3s ease;
 }
 form .field input:focus::placeholder{
-  color: #b3b3b3;
+  color: #312f2f;
 }
 .form-inner form .pass-link{
   margin-top: 5px;
@@ -1301,7 +1301,7 @@ form .field input:focus::placeholder{
   text-align: center;
   margin-top: 30px;
 }
-.form-inner form .pass-link a,
+/* .form-inner form .pass-link a,
 .form-inner form .signup-link a{
   color: rgb(13, 98, 254);
   text-decoration: none;
@@ -1309,7 +1309,7 @@ form .field input:focus::placeholder{
 .form-inner form .pass-link a:hover,
 .form-inner form .signup-link a:hover{
   text-decoration: underline;
-}
+} */
 form .btn{
   height: 50px;
   width: 100%;
@@ -1344,8 +1344,6 @@ form .btn input[type="submit"]{
   cursor: pointer;
 }
 
-.form-inner form .field input{
-  border: 2px solid gray;
-}
+
  
 
