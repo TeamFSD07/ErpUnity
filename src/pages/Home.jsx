@@ -61,7 +61,7 @@ const HomeSection = () => {
                     </div>
 
                     <div className="hero_content_cta_video-link modelbox_show">
-                      <span>"What We Do"</span>
+                      <span className="wwd">"What We Do"</span>
                       <a href="https://www.google.com/search?sca_esv=458fc5d25ecd7a59&rlz=1C1CHBF_enIN1042IN1042&sxsrf=ADLYWIKhf1tlUJSGbOdz579icKBKAQBP4g:1720849199493&q=erp+short+videos&tbm=vid&source=lnms&fbs=AEQNm0CvspUPonaF8UH5s_LBD3JPX4RSeMPt9v8oIaeGMh2T2PRrsfVPlQRxSTpQ4UUI6wdpgUZjCvQoq5Ehqqy4E5VpqvIcFJs0zO4mcPRxENNNxtdFArFakaI1ygyrJTSXndBYq4cXQfQCDX2YAQEeKQ413uxhGyAmaoCB5PRuiJrwBBZcYE9NuoxwUWH_XN_VXX2MKimdEsnYHrzD8iB3eagj01m3sA&sa=X&ved=2ahUKEwiPt_3ppqOHAxWfyDgGHfMTDvkQ0pQJegQICxAB&biw=1471&bih=654&dpr=1.2#fpstate=ive&vld=cid:71242dee,vid:c9HfNg4a_Og,st:0">
                         <i className="fa-solid fa-circle-play"></i>
                       </a>
@@ -81,7 +81,7 @@ const HomeSection = () => {
               <h3>ACCOUNTING & FINANCIAL</h3>
               <p>
                 Accounting provides reporting on project costs, revenues, profits and
-                operations.
+                operations.accounting for the entire business rather than its subdivisions.
               </p>
             </div>
             <div className="card">
@@ -89,7 +89,7 @@ const HomeSection = () => {
               <h3> HUMAN RESOURCE MANAGEMENT</h3>
               <p>
                 HRM helps project managers delegate workloads and measure seasonal
-                fluctuations for labor forecasting.
+                fluctuations for labor forecasting.Recruitment is a fundamental function of HRM.
               </p>
             </div>
             <div className="card">
@@ -135,7 +135,7 @@ const HomeSection = () => {
 
         <div className="editing">Enterprise Resource Planning</div>
         <div className="editbtn">
-          <a href="./pages/login">
+          <a href="/login">
             <button className="login-button">Login</button>
           </a>
         </div>

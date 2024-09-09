@@ -1,14 +1,15 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button'; // Import Button for Logout
 import Typography from '@mui/material/Typography';
 import { createTheme } from '@mui/material/styles';
-import DashboardIcon from '@mui/icons-material/Dashboard';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for redirecting after logout
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import DescriptionIcon from '@mui/icons-material/Description';
 import LayersIcon from '@mui/icons-material/Layers';
-import { AppProvider } from '@toolpad/core/AppProvider';
+import { AppProvider } from '@toolpad/core/AppProvider'; 
 import { DashboardLayout } from '@toolpad/core/DashboardLayout';
 
 const NAVIGATION = [
@@ -16,7 +17,6 @@ const NAVIGATION = [
     kind: 'header',
     title: 'Admin Dashboard',
   },
-  
   {
     segment: 'orders',
     title: 'Orders',
@@ -91,9 +91,7 @@ DemoPageContent.propTypes = {
 
 function DashboardLayoutBasic(props) {
   const { window } = props;
-
   const [pathname, setPathname] = React.useState('/ Admin Dashboard');
-
   const router = React.useMemo(() => {
     return {
       pathname,
@@ -102,11 +100,21 @@ function DashboardLayoutBasic(props) {
     };
   }, [pathname]);
 
-  // Remove this const when copying and pasting into your project.
   const demoWindow = window !== undefined ? window() : undefined;
 
+  // Navigate function from react-router-dom for navigation
+  const navigate = useNavigate();
+
+  // Logout function
+  const handleLogout = () => {
+    // Clear any session or token (if necessary)
+    localStorage.removeItem("authToken"); // Example
+
+    // Redirect to login page
+    navigate("/login");
+  };
+
   return (
-    // preview-start
     <AppProvider
       navigation={NAVIGATION}
       router={router}
@@ -114,18 +122,29 @@ function DashboardLayoutBasic(props) {
       window={demoWindow}
     >
       <DashboardLayout>
+        {/* Logout button placed here */}
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'flex-end',
+            padding: '16px',
+          }}
+        >
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={handleLogout}
+          >
+            Logout
+          </Button>
+        </Box>
         <DemoPageContent pathname={pathname} />
       </DashboardLayout>
     </AppProvider>
-    // preview-end
   );
 }
 
 DashboardLayoutBasic.propTypes = {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * Remove this when copying and pasting into your project.
-   */
   window: PropTypes.func,
 };
 

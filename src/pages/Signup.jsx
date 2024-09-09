@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./signup.css";
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [step, setStep] = useState(1);
@@ -14,7 +15,7 @@ const Signup = () => {
         username: '',
         password: '',
     });
-
+    const navigate = useNavigate();
     const nextStep = () => setStep(prevStep => prevStep + 1);
     const prevStep = () => setStep(prevStep => prevStep - 1);
 
@@ -27,17 +28,25 @@ const Signup = () => {
     };
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post('http://localhost:8080/api/register', formData);
-            console.log('User registered successfully', response.data);
-            // Handle successful registration (e.g., redirect to a different page)
-        } catch (error) {
-            console.error('Error registering user', error);
-            // Handle error (e.g., display error message)
-        }
-    };
-
+      e.preventDefault();
+      try {
+        console.log('Submitting form with data:', formData);
+        const response = await axios.post('http://localhost:8080/api/register', formData);
+        console.log('User registered successfully:', response.data);
+        
+        // Show alert message for successful registration
+        alert('User registered successfully. Please login!');
+        
+        // Redirect to the login page after the alert is dismissed
+        navigate('/login'); 
+    } catch (error) {
+        console.error('Error registering user:', error);
+        // Handle the error and display a message to the user if necessary
+        alert('An error occurred while registering the user.');
+    }
+    
+  };
+  
     return (
         <div className="Signup-Container">
             <div className="sumit-container">
@@ -157,6 +166,7 @@ const Signup = () => {
                                         onChange={handleChange}
                                         required
                                     >
+                                        <option value="select">Select</option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                         <option value="other">Other</option>
@@ -201,8 +211,9 @@ const Signup = () => {
                                         Previous
                                     </button>
                                     <button type="submit" className="sumit-submit">
-                                        Submit
+                                      Submit
                                     </button>
+
                                 </div>
                             </div>
                         )}
@@ -210,7 +221,7 @@ const Signup = () => {
                 </div>
             </div>
         </div>
-    );
+    ); 
 };
 
 export default Signup;

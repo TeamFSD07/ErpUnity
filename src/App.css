@@ -143,16 +143,16 @@ ul, li, a:hover {
   margin-top: 1em;
 }
 
-/* span{
-  padding-left: 90px;
-} */
+.wwd{
+  padding-left: 50px;
+}
 
 .btn-cta_primary {
   background-color: #1e5289;
   padding: 10px 20px;
   border-radius: 5px;
   display: inline-block;
-  margin-left: 70px;
+  margin-left: 30px;
 }
 
 .btn-cta_primary a {
@@ -761,9 +761,12 @@ footer .bottom-details .bottom_text {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 300px;
+  max-width: 350px;
   text-align: center;
+  
 }
+
+
 
 .testimonial img {
   border-radius: 50%;
@@ -823,7 +826,7 @@ footer .bottom-details .bottom_text {
 .team-member h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #007BFF;
+  color: #112d4a;
 }
 
 .team-member h4 {
@@ -832,15 +835,10 @@ footer .bottom-details .bottom_text {
   color: #666;
 }
 
-.team-social a {
-  color: #007BFF;
-  font-size: 1.5em;
-  margin: 0 10px;
+.team-member .team-social i{
+  color: gray;
 }
 
-.team-social a:hover {
-  color: #0056b3;
-}
 
 /* Service CSS */
 /* Container and row styles */
@@ -1183,7 +1181,7 @@ footer .bottom-details .bottom_text {
 }
 .wrapper{
   overflow: hidden;
-  max-width: 490px;
+  width: 450px;
   background: #fff;
   padding: 30px;
   border-radius: 5px;
@@ -1280,7 +1278,7 @@ input[type="radio"]{
   outline: none;
   padding-left: 15px;
   border-radius: 5px;
-  border: 1px solid lightgrey;
+  border: 2px solid rgb(46, 45, 45);
   border-bottom-width: 2px;
   font-size: 17px;
   transition: all 0.3s ease;
@@ -1346,5 +1344,8 @@ form .btn input[type="submit"]{
   cursor: pointer;
 }
 
+.form-inner form .field input{
+  border: 2px solid gray;
+}
  
 
