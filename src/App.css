@@ -770,21 +770,22 @@ footer .bottom-details .bottom_text {
 
 .testimonial img {
   border-radius: 50%;
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   margin-bottom: 20px;
 }
 
 .testimonial p {
-  font-size: 1em;
+  font-size: 1.2em;
   color: #666;
   margin-bottom: 15px;
 }
 
 .testimonial h3 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: #333;
+  font-weight: bold;
 }
 
 .team-section {
@@ -812,13 +813,13 @@ footer .bottom-details .bottom_text {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  max-width: 300px;
+  width: 320px;
 }
 
 .team-member img {
   border-radius: 50%;
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
   margin-bottom: 20px;
 }
@@ -827,16 +828,20 @@ footer .bottom-details .bottom_text {
   font-size: 1.5em;
   margin-bottom: 10px;
   color: #112d4a;
+  font-weight: bold;
 }
 
 .team-member h4 {
   font-size: 1.2em;
   margin-bottom: 20px;
   color: #666;
+  font-weight: bold;
 }
 
 .team-member .team-social i{
   color: gray;
+  font-size: large;
+  font-weight: bold;
 }
 
 
@@ -857,7 +862,7 @@ footer .bottom-details .bottom_text {
 /* Card styles */
 .card {
   
-  max-width: 550px;
+  width: 350px;
   height: 405px; /* Fixed height */
   display: flex;
   flex-direction: column;
@@ -936,7 +941,7 @@ footer .bottom-details .bottom_text {
 .service-idea {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
   padding: 3em;
   background-color: aliceblue;
   margin-bottom: 3em; /* Adds spacing between sections */
@@ -956,8 +961,7 @@ footer .bottom-details .bottom_text {
   padding: 1em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
-}
-
+} 
 .service_content h2 {
   font-size: 2em;
   margin-bottom: 0.5em;
@@ -974,6 +978,10 @@ footer .bottom-details .bottom_text {
   height: auto;
   border-radius: 8px;
 }
+
+
+
+
 
 /* contact css */
 /* Container and row styles */
@@ -1080,16 +1088,20 @@ footer .bottom-details .bottom_text {
   font-weight: bold;
   font-size: 26px;
   color: #0b023f;
+  margin-top: 35px;
 }
 
 .container-form {
-  max-width: 800px;
+  width: 1000px;
   margin: auto;
   padding: 30px;
   border: 1px solid #190438;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   background-color: #e5e9ee;
+  text-align: left;
+  font-size: 20px;
+  margin-bottom: 35px;
 }
 
 .container-form h2 {
