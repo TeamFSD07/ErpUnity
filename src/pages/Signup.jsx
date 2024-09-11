@@ -32,7 +32,7 @@ const Signup = () => {
         e.preventDefault();
         try {
             console.log('Submitting form with data:', formData);
-            const response = await axios.post('http://localhost:8080/api/register', formData);
+            const response = await axios.post('http://localhost:5000/api/register', formData);
             console.log('User registered successfully:', response.data);
             alert('User registered successfully. Please login!');
             navigate('/login');
@@ -47,30 +47,7 @@ const Signup = () => {
             <div className="sumit-container">
                 <header>Signup Form</header>
                 <div className="sumit-progress-bar">
-                    <div className={`sumit-step ${step >= 1 ? "active" : ""}`}>
-                        <p>Name</p>
-                        <div className="sumit-bullet">
-                            <span>1</span>
-                        </div>
-                    </div>
-                    <div className={`sumit-step ${step >= 2 ? "active" : ""}`}>
-                        <p>Contact</p>
-                        <div className="sumit-bullet">
-                            <span>2</span>
-                        </div>
-                    </div>
-                    <div className={`sumit-step ${step >= 3 ? "active" : ""}`}>
-                        <p>Birth</p>
-                        <div className="sumit-bullet">
-                            <span>3</span>
-                        </div>
-                    </div>
-                    <div className={`sumit-step ${step >= 4 ? "active" : ""}`}>
-                        <p>Submit</p>
-                        <div className="sumit-bullet">
-                            <span>4</span>
-                        </div>
-                    </div>
+                    {/* Progress bar code */}
                 </div>
 
                 <div className="sumit-form-outer">

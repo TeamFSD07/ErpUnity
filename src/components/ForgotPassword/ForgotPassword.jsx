@@ -17,7 +17,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/send-reset-code",
+        "http://localhost:5000/api/send-reset-code",
         { email },
         { headers: { "Content-Type": "application/json" } }
       );
@@ -42,7 +42,7 @@ const ForgotPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/reset-password",
+        "http://localhost:5000/api/reset-password",
         { email, code, newPassword },
         { headers: { "Content-Type": "application/json" } }
       );

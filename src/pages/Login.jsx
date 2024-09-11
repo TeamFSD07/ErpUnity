@@ -31,8 +31,8 @@ const Login = () => {
 
     const loginType = isLoginMode ? "admin" : "employee";
     const apiUrl = isLoginMode
-      ? `http://localhost:8080/api/admin/login?email=${email}&password=${password}`
-      : `http://localhost:8080/api/employee/login?email=${email}&password=${password}`;
+      ? `http://localhost:5000/api/admin/login?email=${email}&password=${password}`
+      : `http://localhost:5000/api/employee/login?email=${email}&password=${password}`;
 
     try {
       const response = await axios.get(apiUrl);
