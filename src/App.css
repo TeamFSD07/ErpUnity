@@ -1356,6 +1356,53 @@ form .btn input[type="submit"]{
   cursor: pointer;
 }
 
+/* forgot password */
+
+.reset-password-container, .forgot-password-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.forgot-password-container .field {
+  margin-bottom: 10px;
+}
+
+.forgot-password-container form .field input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #050303;
+  border-radius: 4px;
+  background-color: #f0f0f0; /* Temporary background color for visibility */
+}
+
+
+.forgot-password-container .btn input {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  border: none;
+  color: rgb(13, 4, 4);
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.forgot-password-container .btn input:hover {
+  background-color: #0056b3;
+}
+
+.forgot-password-container .success-message, .error-message {
+  color: green;
+  text-align: center;
+}
+
+.forgot-password-container .error-message {
+  color: red;
+}
+
+
 
  
 

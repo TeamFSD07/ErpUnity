@@ -16,6 +16,7 @@ const Signup = () => {
         password: '',
     });
     const navigate = useNavigate();
+
     const nextStep = () => setStep(prevStep => prevStep + 1);
     const prevStep = () => setStep(prevStep => prevStep - 1);
 
@@ -28,25 +29,19 @@ const Signup = () => {
     };
 
     const handleSubmit = async (e) => {
-      e.preventDefault();
-      try {
-        console.log('Submitting form with data:', formData);
-        const response = await axios.post('http://localhost:8080/api/register', formData);
-        console.log('User registered successfully:', response.data);
-        
-        // Show alert message for successful registration
-        alert('User registered successfully. Please login!');
-        
-        // Redirect to the login page after the alert is dismissed
-        navigate('/login'); 
-    } catch (error) {
-        console.error('Error registering user:', error);
-        // Handle the error and display a message to the user if necessary
-        alert('An error occurred while registering the user.');
-    }
+        e.preventDefault();
+        try {
+            console.log('Submitting form with data:', formData);
+            const response = await axios.post('http://localhost:8080/api/register', formData);
+            console.log('User registered successfully:', response.data);
+            alert('User registered successfully. Please login!');
+            navigate('/login');
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while registering the user.');
+        }
+    };
     
-  };
-  
     return (
         <div className="Signup-Container">
             <div className="sumit-container">
@@ -80,6 +75,7 @@ const Signup = () => {
 
                 <div className="sumit-form-outer">
                     <form onSubmit={handleSubmit}>
+                        {/* Step 1 */}
                         {step === 1 && (
                             <div className="sumit-page sumit-slide-page">
                                 <div className="sumit-title">Basic Info:</div>
@@ -111,6 +107,7 @@ const Signup = () => {
                             </div>
                         )}
 
+                        {/* Step 2 */}
                         {step === 2 && (
                             <div className="sumit-page sumit-slide-page">
                                 <div className="sumit-title">Contact Info:</div>
@@ -145,6 +142,7 @@ const Signup = () => {
                             </div>
                         )}
 
+                        {/* Step 3 */}
                         {step === 3 && (
                             <div className="sumit-page sumit-slide-page">
                                 <div className="sumit-title">Date of Birth:</div>
@@ -166,7 +164,7 @@ const Signup = () => {
                                         onChange={handleChange}
                                         required
                                     >
-                                        <option value="select">Select</option>
+                                        <option value="">Select</option>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                         <option value="other">Other</option>
@@ -183,6 +181,7 @@ const Signup = () => {
                             </div>
                         )}
 
+                        {/* Step 4 */}
                         {step === 4 && (
                             <div className="sumit-page sumit-slide-page">
                                 <div className="sumit-title">Login Details:</div>
@@ -213,7 +212,6 @@ const Signup = () => {
                                     <button type="submit" className="sumit-submit">
                                       Submit
                                     </button>
-
                                 </div>
                             </div>
                         )}

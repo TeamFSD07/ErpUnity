@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../App.css";
+import ForgotPassword from '../components/ForgotPassword/ForgotPassword';
 
 const Login = () => {
   const [isLoginMode, setIsLoginMode] = useState(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isForgotPassword, setIsForgotPassword] = useState(false);  // New state for forgot password
 
   const handleLoginClick = () => {
     setIsLoginMode(true);
@@ -26,39 +28,40 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const loginType = isLoginMode ? "admin" : "employee";
     const apiUrl = isLoginMode
       ? `http://localhost:8080/api/admin/login?email=${email}&password=${password}`
       : `http://localhost:8080/api/employee/login?email=${email}&password=${password}`;
-  
+
     try {
       const response = await axios.get(apiUrl);
-      console.log("Response from API ",response);
-      // Redirect user to their respective dashboard based on login type
+      console.log("Response from API ", response);
       if (response.data === true) {
         if (loginType === "admin") {
-          alert("Welcome to Admin Dashboard"); // Custom alert for admin
+          alert("Welcome to Admin Dashboard");
           window.location.href = "/adminDashboard";
         } else {
-          alert("Welcome to Employee Dashboard"); // Custom alert for employee
+          alert("Welcome to Employee Dashboard");
           window.location.href = "/employeeDashboard";
         }
       } else {
-        setErrorMessage("Invalid credentials, please try again."); // Show invalid credentials message
+        setErrorMessage("Invalid credentials, please try again.");
       }
     } catch (error) {
       console.error("Login failed", error);
-  
-      // Check if the error is due to invalid credentials or some other issue
       if (error.response && (error.response.status === 401 || error.response.status === 404)) {
-        setErrorMessage("Invalid credentials, please try again."); // Show invalid credentials error
+        setErrorMessage("Invalid credentials, please try again.");
       } else {
-        setErrorMessage("An error occurred, please try again later."); // General error message
+        setErrorMessage("An error occurred, please try again later.");
       }
     }
   };
-  
+
+  if (isForgotPassword) {
+    return <ForgotPassword goBack={() => setIsForgotPassword(false)} />;
+  }
+
   return (
     <div className="main-container">
       <div className="wrapper">
@@ -125,7 +128,7 @@ const Login = () => {
               </div>
               {errorMessage && <p className="error-message">{errorMessage}</p>}
               <div className="pass-link">
-                <a href="#">Forgot password?</a>
+                <a href="#" onClick={() => setIsForgotPassword(true)}>Forgot password?</a>
               </div>
               <div className="field btn">
                 <div className="btn-layer"></div>
