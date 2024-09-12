@@ -17,7 +17,7 @@ import salespurchases from '../assets/images/salespurchases.jpg';
 
 const ServiceCard = ({ imageSrc, title, text }) => {
   return (
-    <div className="col-12 col-md-4">
+    <div className="col-12 col-md-3">
       <div className="card">
         <img src={imageSrc} alt={title} className="card-img-top" />
         <div className="card-body">
@@ -108,17 +108,17 @@ const Services = () => {
               <ServiceCard
                 imageSrc={alerts}
                 title="Alert and Notification"
-                text="Alerts are typically delivered through a notification system."
+                text="The Notification Detail report shows all the alerts sent over the selected period, and whom they were sent to."
               />
               <ServiceCard
                 imageSrc={reports}
                 title="Reports"
-                text="A report is a specific form of written content, concise and clearly organized."
+                text="reporting is primarily the means and measures to collect, process, store and present information within a company."
               />
               <ServiceCard
                 imageSrc={order}
                 title="Order Details"
-                text="Order Information means all information about the Supply."
+                text="The Details page provides billing, shipping, and charge information about a single sales order."
               />
               <ServiceCard
                 imageSrc={salespurchases}
@@ -126,6 +126,9 @@ const Services = () => {
                 text="Purchase involves getting goods or properties. Sale involves transferring products from seller to buyer."
               />
             </div>
+            <br>
+            </br>
+            
           </div>
         </section>
       </section>

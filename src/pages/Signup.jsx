@@ -41,15 +41,49 @@ const Signup = () => {
             alert('An error occurred while registering the user.');
         }
     };
-    
+
+    const getStepClass = (currentStep) => {
+        return step >= currentStep ? 'sumit-step active' : 'sumit-step';
+    };
+
     return (
         <div className="Signup-Container">
             <div className="sumit-container">
                 <header>Signup Form</header>
+                
+                {/* Progress Bar */}
                 <div className="sumit-progress-bar">
-                    {/* Progress bar code */}
+                    <div className={getStepClass(1)}>
+                        <p>Name</p>
+                        <div className="sumit-bullet">
+                            <span>1</span>
+                        </div>
+                        <div className="sumit-check fas fa-check"></div>
+                    </div>
+                    <div className={getStepClass(2)}>
+                        <p>Contact</p>
+                        <div className="sumit-bullet">
+                            <span>2</span>
+                        </div>
+                        <div className="sumit-check fas fa-check"></div>
+                    </div>
+                    <div className={getStepClass(3)}>
+                        <p>Birth</p>
+                        <div className="sumit-bullet">
+                            <span>3</span>
+                        </div>
+                        <div className="sumit-check fas fa-check"></div>
+                    </div>
+                    <div className={getStepClass(4)}>
+                        <p>Submit</p>
+                        <div className="sumit-bullet">
+                            <span>4</span>
+                        </div>
+                        <div className="sumit-check fas fa-check"></div>
+                    </div>
                 </div>
-
+                
+                {/* Form */}
                 <div className="sumit-form-outer">
                     <form onSubmit={handleSubmit}>
                         {/* Step 1 */}
@@ -63,6 +97,7 @@ const Signup = () => {
                                         name="firstname"
                                         value={formData.firstname}
                                         onChange={handleChange}
+                                       
                                         required
                                     />
                                 </div>
@@ -73,6 +108,7 @@ const Signup = () => {
                                         name="lastname"
                                         value={formData.lastname}
                                         onChange={handleChange}
+                                        
                                         required
                                     />
                                 </div>
@@ -95,6 +131,7 @@ const Signup = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
+                                        
                                         required
                                     />
                                 </div>
@@ -105,6 +142,7 @@ const Signup = () => {
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleChange}
+                                       
                                         required
                                     />
                                 </div>
@@ -130,6 +168,7 @@ const Signup = () => {
                                         name="dob"
                                         value={formData.dob}
                                         onChange={handleChange}
+                                       
                                         required
                                     />
                                 </div>
@@ -139,6 +178,7 @@ const Signup = () => {
                                         name="gender"
                                         value={formData.gender}
                                         onChange={handleChange}
+                                        
                                         required
                                     >
                                         <option value="">Select</option>
@@ -169,6 +209,7 @@ const Signup = () => {
                                         name="username"
                                         value={formData.username}
                                         onChange={handleChange}
+                                        
                                         required
                                     />
                                 </div>
@@ -179,6 +220,7 @@ const Signup = () => {
                                         name="password"
                                         value={formData.password}
                                         onChange={handleChange}
+                                        
                                         required
                                     />
                                 </div>
@@ -196,7 +238,7 @@ const Signup = () => {
                 </div>
             </div>
         </div>
-    ); 
+    );
 };
 
 export default Signup;

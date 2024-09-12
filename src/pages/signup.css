@@ -20,11 +20,9 @@
 
 }
 .sumit-container {
-  width: 400px;
+  width: 420px;
   background: #fff;
   text-align: center;
-  
-
   border-radius: 5px;
   padding: 50px 35px 10px 35px;
   margin-top: 25px;
@@ -101,7 +99,7 @@
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: none !important;
   transition: 0.5s ease;
 }
 
@@ -255,3 +253,19 @@
   .sumit-step.active .sumit-bullet span {
     color: white;
   }
+  
+ 
+  
+ 
+ 
+  .sumit-field input, 
+  .sumit-field select {
+    height: 100%;
+    width: 100%;
+    border: 1px solid gray !important; /* Added !important */
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+  

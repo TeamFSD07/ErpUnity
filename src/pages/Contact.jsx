@@ -90,9 +90,9 @@ const Contact = () => {
                 <label htmlFor="country">Country <span>*</span></label>
                 <select id="country" name="country" required>
                   <option value="">Select your country</option>
-                  <option value="country1">Country 1</option>
-                  <option value="country2">Country 2</option>
-                  <option value="country3">Country 3</option>
+                  <option value="country1">India</option>
+                  <option value="country2">nepal</option>
+                  <option value="country3">Bhutan</option>
                 </select>
               </div>
               <div className="form-group">

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import '../../App.css';
 
 const ResetPassword = () => {
@@ -11,6 +11,8 @@ const ResetPassword = () => {
   const [loading, setLoading] = useState(false);
   const search = useLocation().search;
   const token = new URLSearchParams(search).get("token");
+
+  const navigate = useNavigate(); // For redirecting after reset
 
   const handleResetPassword = async (e) => {
     e.preventDefault();
@@ -29,6 +31,11 @@ const ResetPassword = () => {
       });
       setMessage(response.data);
       setErrorMessage("");
+
+      // Show alert and navigate after user clicks "OK"
+      alert("Password reset successful!");
+      navigate("/login");
+
     } catch (error) {
       if (error.response && error.response.data) {
         setErrorMessage(error.response.data);

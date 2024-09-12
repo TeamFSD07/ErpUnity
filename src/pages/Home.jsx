@@ -89,7 +89,7 @@ const HomeSection = () => {
               <h3> HUMAN RESOURCE MANAGEMENT</h3>
               <p>
                 HRM helps project managers delegate workloads and measure seasonal
-                fluctuations for labor forecasting.Recruitment is a fundamental function of HRM.
+                fluctuations for labor forecasting.
               </p>
             </div>
             <div className="card">
@@ -105,7 +105,7 @@ const HomeSection = () => {
               <h3>SUPPLY CHAIN MANAGEMENT</h3>
               <p>
                 Single Channel for business partners collaborate, analyze and forecast
-                based on a holistic understanding of product lifecycles
+                based on a holistic understanding of product lifecycles.
               </p>
             </div>
           </div>

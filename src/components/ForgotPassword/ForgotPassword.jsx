@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import '../../App.css';
 
 const ForgotPassword = () => {
@@ -10,6 +11,8 @@ const ForgotPassword = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1); // To manage form steps
+
+  const navigate = useNavigate(); // Initialize useNavigate for redirection
 
   const handleSendCode = async (e) => {
     e.preventDefault();
@@ -48,6 +51,11 @@ const ForgotPassword = () => {
       );
       setMessage(response.data);
       setErrorMessage("");
+
+      // Show alert and navigate after user clicks "OK"
+      alert("Your password has been reset successfully.");
+      navigate("/login");
+
     } catch (error) {
       if (error.response && error.response.data) {
         setErrorMessage(error.response.data);

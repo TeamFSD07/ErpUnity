@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap'); */
 
 :root {
     --blue: #0188DF;
@@ -14,7 +14,7 @@
     border: none !important;
     outline: none !important;
     text-decoration: none !important;
-    text-transform: capitalize;
+    text-transform: none !important;
     font-weight: 400;
     transition: all .2s linear;
 }
@@ -30,14 +30,14 @@ body {
 }
 
 ul, li, a {
-    color: rgb(242, 241, 246) !important;
+    color: rgb(7, 3, 27) !important;
     margin-top: 7px;
     margin-bottom: 7px;
     font-size: 20px;
 }
 
 ul, li, a:hover {
-    color: rgb(65, 46, 243) !important;
+    color: rgb(211, 209, 229) !important;
     
 }
 
@@ -101,21 +101,21 @@ ul, li, a:hover {
   position:fixed;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 10%;
+  width: 100%;
+  min-height: 20%;
   z-index: -1;
   object-fit: cover;
-  opacity: 0.3;
+  opacity: 0.4;
 }
 /* Full-width and height of the main content */
 .main-content {
   display:flex;
   align-items: center;
   justify-content: center;
-  min-height: 70vh;
+  min-height: 80vh;
   color: rgb(10, 4, 53);
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: bold;
   padding-top: 10px;
 }
@@ -148,11 +148,12 @@ ul, li, a:hover {
 }
 
 .btn-cta_primary {
-  background-color: #1e5289;
-  padding: 10px 20px;
+  background-color: #41658a;
+  padding: 10px 10px;
   border-radius: 5px;
   display: inline-block;
   margin-left: 30px;
+  font-size: 25px;
 }
 
 .btn-cta_primary a {
@@ -176,12 +177,14 @@ ul, li, a:hover {
   background-color: #f5f5f5;
   text-align: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
 }
 
 .news h2 {
   font-size: 2em;
   margin-bottom: 1em;
   margin-top: 1.5em;
+  font-weight: bold;
 }
 
 .cards {
@@ -191,12 +194,13 @@ ul, li, a:hover {
 }
 
 .card {
-  background-color: rgb(207, 208, 242);
+  background-color: rgb(232, 233, 247);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  width: 300px;
-  text-align: left;
+  width: 350px;
+  
+   margin-left: 20px;
 }
 
 .card img {
@@ -207,16 +211,16 @@ ul, li, a:hover {
 .card h3 {
   font-size: 1.5em;
   margin: 0.5em;
-  color: #312828;
+  color: #1b1515;
   font-weight: bold;
 }
 
 .card p {
-  font-size: 1em;
+  font-size: 1.2em;
   margin: 0.5em;
   padding: 0 0.5em;
   color: #312828;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Description section styles */
@@ -251,7 +255,7 @@ ul, li, a:hover {
 .description_content p {
   font-size: 1.2em;
   color: #2d2929;
-  text-align: justify;
+  text-align: left;
 
 }
 
@@ -839,8 +843,14 @@ footer .bottom-details .bottom_text {
 }
 
 .team-member .team-social i{
-  color: gray;
-  font-size: large;
+  color: rgb(24, 12, 67);
+  font-size:x-large;
+  font-weight: bold;
+}
+
+.team-member .team-social i:hover{
+  color: rgb(99, 98, 104);
+  font-size:x-large;
   font-weight: bold;
 }
 
@@ -853,17 +863,17 @@ footer .bottom-details .bottom_text {
   padding: 20px;
 }
 
-.row {
+.container-service .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 /* Card styles */
-.card {
+.container-service .card {
   
   width: 350px;
-  height: 405px; /* Fixed height */
+  height: 390px; /* Fixed height */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -871,35 +881,37 @@ footer .bottom-details .bottom_text {
   background-color: #e8e8f2;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  margin: 5px;
-  padding: 10px;
+  margin-left: 20px;
+  
+  padding-left: 10px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card i {
+.container-service .card i {
   font-size: 50px;
   margin-bottom: 15px;
   color: #007BFF; /* Customize icon color */
 }
 
-.card h3 {
+.container-service .card h3 {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
-.card p {
-  font-size: 16px;
+.container-service .card p {
+  font-size: 20px;
   color: #666;
 }
 
-.card-title {
+.container-service .card-title {
  font-size: 20px;
  color: rgb(8, 8, 77);
  font-weight: bold;
 }
 
-.card-text {
+.container-service .card-text {
   font-size: 16px;
   text-align: left;
 }
@@ -978,10 +990,6 @@ footer .bottom-details .bottom_text {
   height: auto;
   border-radius: 8px;
 }
-
-
-
-
 
 /* contact css */
 /* Container and row styles */
@@ -1290,13 +1298,16 @@ input[type="radio"]{
   outline:#424141;
   padding-left: 15px;
   border-radius: 5px;
-  border: 2px solid rgb(46, 45, 45);
-  border-bottom-width: 2px;
+  border: 1px solid gray !important; /* Added !important */
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+    box-sizing: border-box;
   font-size: 17px;
   transition: all 0.3s ease;
 }
 .form-inner form .field input:focus{
-  border-color: rgb(13, 98, 254)
+  border-color: rgb(13, 98, 254);
   /* box-shadow: inset 0 0 3px #fb6aae; */
 }
 .form-inner form .field input::placeholder{
@@ -1313,15 +1324,20 @@ form .field input:focus::placeholder{
   text-align: center;
   margin-top: 30px;
 }
-/* .form-inner form .pass-link a,
-.form-inner form .signup-link a{
-  color: rgb(13, 98, 254);
+.form-inner form .signup-link ul li a{
+  color:#050835;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+  color: rgb(13, 98, 254) !important; /* Blue color before hovering */
   text-decoration: none;
 }
+
 .form-inner form .pass-link a:hover,
-.form-inner form .signup-link a:hover{
-  text-decoration: underline;
-} */
+.form-inner form .signup-link a:hover {
+  text-decoration: underline !important; /* Optional: underline on hover */
+}
+
 form .btn{
   height: 50px;
   width: 100%;
@@ -1357,7 +1373,9 @@ form .btn input[type="submit"]{
 }
 
 /* forgot password */
-
+.reset-password-container{
+  background-color: #0188DF;
+}
 .reset-password-container, .forgot-password-container {
   max-width: 400px;
   margin: auto;

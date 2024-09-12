@@ -9,6 +9,9 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import AdminDash from './Dashboard/AdminDash';
 import EmployeeDash from './Dashboard/EmployeeDash';
+import ForgotPassword from './components/ForgotPassword/ForgotPassword';
+import ResetPassword from './components/ResetPassword/ResetPassword';
+
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -27,6 +30,9 @@ function App() {
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/adminDashboard" element={<AdminDash />} />
                     <Route path="/employeeDashboard" element={<EmployeeDash />} />
+                    <Route path="/forgotPassword" element={<ForgotPassword />} />
+                    <Route path="/resetPassword/:token" element={<ResetPassword />} />
+                    
                    
                 </Routes>  
             </Router>
